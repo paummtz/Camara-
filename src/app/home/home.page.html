@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title class="page-title">Cámara LE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-light">
+  <div class="main-container">
+    
+    <div class="photo-frame">
+      @if (photo) {
+        <img [src]="photo" class="preview fade-in" />
+      } @else {
+        <div class="placeholder">
+          <div class="icon-circle">
+            <ion-icon name="camera"></ion-icon>
+          </div>
+          <h3>Sin captura</h3>
+          <p>Toma una foto para empezar</p>
+        </div>
+      }
+    </div>
+
+    <div class="actions">
+      <ion-button expand="block" class="btn-primary" (click)="takePhoto()">
+        <ion-icon slot="start" name="aperture-outline"></ion-icon>
+        Capturar Momento
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>
