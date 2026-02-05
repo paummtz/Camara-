@@ -4,13 +4,15 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'camApp',
   webDir: 'www',
+  // npm install @capawesome/capacitor-android-edge-to-edge-support
+// npx cap sync
   plugins: {
-    SplashScreen: {
-      launchShowDuration: 2500,
-      backgroundColor: "#ffffff",
-      showSpinner: false
-    }
-  }
+    EdgeToEdge: {
+      backgroundColor: "#d73636",
+      navigationBarColor: "#1e1e8d",
+      statusBarColor: "#09ff00",
+    },
+  },
 };
 
 export default config;
